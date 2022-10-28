@@ -1,0 +1,103 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/jeremy-perkins-1XgFFEG_RGA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    color:white;
+}
+
+.main-container{
+    height :100vh;
+    width :60vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 4px #151927 solid;
+}
+
+.form-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:120px;
+    height:100%;
+    width:100%;
+    /* padding:25px; */
+    /* justify-content: space-between; */
+    /* border:1px greenyellow solid; */
+    background-color: #222835;
+    
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2b2e3d;
+    border-radius:3px;
+    box-shadow:0px 3px 2px gainsboro;
+    /* border: 1px brown solid; */
+    height:30%;
+    
+    
+}
+
+/* .form-header{
+    border:1px red solid;
+    display: flex;
+    align-items: center;
+} */
+
+.form-row{
+    display:flex;
+    
+    
+}
+
+.form-input{
+   
+   display: flex;
+    flex-direction: column;
+    padding:5px;
+    /* border:1px pink solid; */
+    width:50%;
+    
+}
+
+input{
+    border-radius:5px;
+    padding:7px;
+    width: 80%;
+}
+/* .form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='number'],
+.form-row input[type='password']{
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    padding: 7px;
+    width:100%;
+    font-size: 14px;
+  }
+ */
+.form-header{
+
+}
+
+
+img{
+    
+    height:100vh;
+    width:25vw;
+    
+}
