@@ -11,61 +11,73 @@
 <body>
     
     <div class="main-container">
-        <div class="form-img-container"><img src="assets/martin-katler-7wCxlBfGMdk-unsplash.jpg" alt="form image"></div>
+        <div class="form-img-container">
+            <div class="form-img"><img src="assets/max-andrey-0UekgCtpq30-unsplash.jpg" alt="form image" class="form-img"></div>
+            
+            <div class="form-logo">
+                <div><img src="assets/gbp-logoo-trans.2.png" alt="form image" class="logo-img"></div>
+                
+                <div class="logo-text">Get Better Please Gaming</div>
+            </div>
+        </div>
+       <!--  <img src="assets/gbp-logoo-trans.png" alt=""> -->
         
         
 
         <div class="form-container">
 
             <div class="form-header">
-                This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!
-                Sign up now to get started.
-                You know you want to.
+                <div><h2>This is not a real online service! Being at the bottom of the scoreboard is not cool, you need to get better please!
+                Sign up now to get started.</h2></div>
+                    <br><br>
+                <div><h2>You know you want to.</h2></div>
             </div>
 
-            <form action="#" method="post" class="form">
-                <h3>Get Better Please!</h3>
+            <form action="#" method="post" id="form">
+                <div><h3>Lets Do This!</h3></div>
+                <br>
                 <div class="form-row">
-                    <div class="form-input">
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="Your first name..">
+                    <div class="form-inputs ">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" autocomplete="off" required>
                     </div>
 
-                    <div class="form-input">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Your last name..">
+                    <div class="form-inputs ">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" autocomplete="off">
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-input">
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                    <div class="form-inputs ">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                     </div>
 
-                    <div class="form-input">
-                        <label for="phone_num">Phone Number:</label>
-                        <input type="number" id="phone_num" name="phone_num">
+                    <div class="form-inputs ">
+                        <label for="phone_num">PHONE NUMBER</label>
+                        <input type="number" id="phone_num" name="phone_num" autocomplete="off" required>
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-input">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password">
+                    <div class="form-inputs ">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
                     </div>
 
-                    <div class="form-input">
-                        <label for="confirm_password">Confirm Password:</label>
-                        <input type="password" id="confirm_password" name="confirm_password">
+                    <div class="form-inputs ">
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
                     </div>
                 </div>
                 
             </form>
 
             <div class="form-footer">
-                <button>Create Account</button><br>
-                Already have an account? Sign-in
+
+                <button type="submit" form="form">Create Account</button><br><br>
+                Already have an account? <a href="#">Sign-in</a> 
             </div>
 
         </div> <!-- form-container -->
