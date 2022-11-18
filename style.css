@@ -1,5 +1,9 @@
 :root{
+
+    /* font-size:14px; */
     --left-margin: 15px;
+    --form-img-width:40%;
+    --form-body-width:60%;
 }
 
 *{
@@ -11,7 +15,7 @@
 
 body{
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
+    font-size: .83rem;
     display: flex;
     justify-content: center;
     background-image: url("assets/josh-durham-4rn4X_QnGV4-unsplash.jpg");
@@ -38,7 +42,6 @@ body{
 
 .form-container{
     display:flex;
-    flex-direction: column;
     justify-content: center;
     height:100%;
     width:100%;
@@ -50,7 +53,14 @@ body{
 }
 
 .form-header{
-    padding:0px 0px 140px var(--left-margin);
+    padding:0px 15px 140px var(--left-margin);
+}
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--form-body-width); 
 }
 
 #form{
@@ -62,45 +72,48 @@ body{
     height:30%;
     padding-left:var(--left-margin);
     border-radius:3px;
-    background-color: #292e43;
+    background-color: rgb(41, 46, 67,0.75);
     box-shadow:0px 5px 3px #1c2131;
 }
 
 .form-footer{
-    width:auto;
+    width:100%;
     position: relative;
     margin-top:-20px;
     padding: 0 0 0 var(--left-margin);
-    
 }
 
-.form-logo{
+.form-logo-div{ 
     display: flex;
+    justify-content: center;
     align-items: center;
     padding:50px;
     position:absolute;
-    top:140px;
-    width:30vw;
-    height: 137px;
+    top:15vh;
+    width:var(--form-img-width);
+    height: 14%;
     background-color: rgba(0, 0, 0, 0.85);
     font-family: bad-signal;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     color:white;
+}
+
+.form-img-container{
+    width:var(--form-img-width);
 }
 
 .form-img{
     position: relative;
     top:0;
     left:0;
-    height:99.5vh;
-    width:30vw;
+    height:100%;
+    width:100%; 
 }
 
 .logo-img{
-    height:117px;
-    width:117px;
+    height:97px;
+    width:auto;
 }
-
 
 .form-row{
     display:flex;
@@ -117,7 +130,7 @@ body{
 input{
     box-sizing:border-box;
     border-radius:4px;
-    padding:5px;
+    padding:4.5px;
     width: 80%;
     background-color:#1f2635;
     border:2px rgb(156, 155, 155) solid;
@@ -181,4 +194,102 @@ a:hover{
 }
 
 
+@media only screen and (max-width : 480px) {
+    
+    body{
+        font-size:.7rem;
+    }
+    
+    .main-container{
+        height:100vh;
+        width: 100vw;
+        border:2px solid;
+        border-image:linear-gradient(purple,red,blue,yellow,green)1;
+        
+    }
+
+     .form-container{
+        display: flex;
+        flex-flow: column;
+        border: darkblue 1px solid;
+        width:100%;
+        height:100%;
+        border:yellow 1px solid;
+    }
+
+    .form-body{
+        border:red 1px solid;
+        height:100%;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .form-header{
+        padding-top: 15px;
+    }
+
+
+    .form-img-container{
+        border: #ad6e02 1px solid;
+        height:15%;
+        width: 100%;
+        overflow: hidden;
+        width: auto;
+    }
+
+    .form-img{
+        content:url(assets/jose-gil-2pNdTBn4C7U-unsplash.jpg);
+        height:auto;
+    }
+
+
+    #form{
+        position:relative;
+        bottom:100px;
+        height:35%;
+    }
+
+    .form-logo-div{ 
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        height:12%;
+        width:100%;
+        top:0px;
+        font-size:1.3rem;
+        background-color: rgba(0, 0, 0, 0.50);
+    }
+
+    .logo-img{
+        height:73px;
+        width:73px;
+    }
+
+    .form-footer{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        bottom:3%;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+    }
+
+    button{
+        width:50%;  
+    }
+    
+}
+
+@media only screen and (max-width : 768px) {
+
+    .form-logo-div{ 
+        font-size:1.2rem;
+    }
+    
+    button{
+        width:60%;
+    }
+}
 
