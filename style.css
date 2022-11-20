@@ -1,7 +1,7 @@
 :root{
 
     /* font-size:14px; */
-    --left-margin: 15px;
+    --left-margin: 25px;
     --form-img-width:40%;
     --form-body-width:60%;
 }
@@ -10,7 +10,6 @@
     padding : 0;
     margin : 0;
     box-sizing: border-box;
-    
 }
 
 body{
@@ -31,10 +30,9 @@ body{
 }
 
 .main-container{
-    height :100vh;
-    width :75vw;
+    height: clamp(768px,100vh,1080px);
+    width : clamp(768px,72vw,1920px);
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     border:3px solid;
     border-image:linear-gradient(purple,red,blue,yellow,green)1;
@@ -47,39 +45,56 @@ body{
     width:100%;
     position: relative;
     background-color: rgb(31, 38, 53,0.97);/* #160e1f; */
-    
 }
 
 .form-header{
-    padding:0px 15px 140px var(--left-margin);
+    padding:0 5px 0 var(--left-margin);
+    margin-top: 12%;
 }
 
 .form-body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-content: space-between;
     width: var(--form-body-width); 
 }
 
-#form{
+.form-main{
+    min-height:30%;
+ }
+
+#form{ 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position:relative;
-    bottom:60px;
-    height:30%;
+    height:100%;
     padding-left:var(--left-margin);
-    border-radius:3px;
+    border-bottom-right-radius:25px;
+    border-top-left-radius:25px;
+    border-top:1px #22273a solid;
+    box-shadow:0px 10px 5px #1c2131;
     background-color: rgb(41, 46, 67,0.75);
-    box-shadow:0px 5px 3px #1c2131;
+   
 }
+
 
 .form-footer{
     width:100%;
-    position: relative;
-    margin-top:-20px;
     padding: 0 0 0 var(--left-margin);
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top:1px #48494C solid;
+    padding: 10px;
+    width: 100%;
+    font-size: x-small;
+}
+
 
 .form-logo-div{ 
     display: flex;
@@ -87,10 +102,10 @@ body{
     align-items: center;
     padding:50px;
     position:absolute;
-    top:15vh;
+    top:15%;
     width:var(--form-img-width);
-    height: 14%;
-    background-color: rgba(0, 0, 0, 0.85);
+    height:16.5%;
+    background-color: rgba(0, 0, 0, 0.8);
     font-family: bad-signal;
     font-size: 1.8rem;
     color:white;
@@ -101,15 +116,12 @@ body{
 }
 
 .form-img{
-    position: relative;
-    top:0;
-    left:0;
     height:100%;
     width:100%; 
 }
 
 .logo-img{
-    height:97px;
+    height:110px;
     width:auto;
 }
 
@@ -192,6 +204,8 @@ a:hover{
 }
 
 
+
+
 @media only screen and (max-width : 480px) {
     
     body{
@@ -199,35 +213,34 @@ a:hover{
     }
     
     .main-container{
-        height:100vh;
+        height:clamp(768px,100vh,100vh);
         width: 100vw;
         border:2px solid;
         border-image:linear-gradient(purple,red,blue,yellow,green)1;
-        
     }
 
      .form-container{
         display: flex;
         flex-flow: column;
-        border: darkblue 1px solid;
         width:100%;
         height:100%;
     }
 
     .form-body{
-        height:100%;
-        width: 100%;
-        justify-content: flex-start;
+        height:100%; /* 12% to image and logo divs */
+        width: 100%;    
     }
     
     .form-header{
-        padding-top: 15px;
+        margin-top: 15px;
+        padding-top:0px;
+        
     }
 
-
     .form-img-container{
-        height:15%;
+        height:12%;
         width: 100%;
+        position: relative; /* for logo div's absolute */
         overflow: hidden;
         width: auto;
     }
@@ -237,18 +250,25 @@ a:hover{
         height:auto;
     }
 
+    .form-footer{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+    }
 
     #form{
-        position:relative;
-        bottom:100px;
-        height:35%;
+        padding-top:10px;
     }
 
     .form-logo-div{ 
         display: flex;
         position: absolute;
         justify-content: center;
-        height:12%;
+        padding:0;
+        height:100%;
         width:100%;
         top:0px;
         font-size:1.3rem;
@@ -257,18 +277,7 @@ a:hover{
 
     .logo-img{
         height:73px;
-        width:73px;
-    }
-
-    .form-footer{
-        width: 100%;
-        display:flex;
-        flex-direction: column;
-        position:relative;
-        bottom:3%;
-        justify-content: center;
-        align-items: center;
-        padding:0;
+        width:auto;
     }
 
     button{
@@ -279,12 +288,15 @@ a:hover{
 
 @media only screen and (max-width : 768px) {
 
+    .main-container{
+        height:clamp(768px,100vh,100vh);
+    }
+
     .form-logo-div{ 
         font-size:1.2rem;
     }
     
     button{
-        width:60%;
+        width:50%;
     }
 }
-
